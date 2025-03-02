@@ -6,8 +6,24 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://forensic-analysis.vercel.app/"),
   title: "Forensic Analysis Guide",
   description: "Step-by-step methods for analyzing trace evidence efficiently",
+  openGraph: {
+    title: "Forensic Analysis Guide",
+    description:
+      "Step-by-step methods for analyzing trace evidence efficiently",
+    url: "https://forensic-analysis.vercel.app/",
+    siteName: "Forensic Analysis Guide",
+    images: [
+      {
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
