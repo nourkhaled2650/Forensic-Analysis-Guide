@@ -1,10 +1,11 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#14273d] object-contain text-white">
-      <header className="p-6 border-b border-[#33FF99]/20">
+      <header className="p-6 border-b border-[#33FF99]/20 flex justify-between items-center">
         <div className="container mx-auto flex items-center gap-2">
           <Image
             quality={100}
@@ -17,6 +18,18 @@ export default function Home() {
             Forensic Analysis Guide
           </h1>
         </div>
+        <Button
+          variant={"ghost"}
+          className="hover:bg-[#e7fcfb]/20 py-1 p-0 cursor-pointer"
+        >
+          <Image
+            quality={100}
+            src="/ai.svg"
+            width={62}
+            height={62}
+            alt={"AI"}
+          />
+        </Button>
       </header>
 
       <main className="container mx-auto py-12 px-4">
