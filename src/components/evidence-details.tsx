@@ -32,12 +32,18 @@ export function EvidenceDetails({ evidence }: { evidence: EvidenceType }) {
       type.toLowerCase().includes("spectroscop")
     )
       return "flask.svg";
+
     if (type.toLowerCase().includes("dna")) return "dna.svg";
     if (type.toLowerCase().includes("isotope")) return "Isotope.svg";
     if (type.toLowerCase().includes("ftir")) return "FTIR.svg";
     if (type.toLowerCase().includes("tga")) return "TGA.svg";
     if (type.toLowerCase().includes("dsc")) return "DSC.svg";
     if (type.toLowerCase().includes("additives")) return "GC.svg";
+    if (type.toLowerCase().includes("refractive")) return "reflative.svg";
+    if (type.toLowerCase().includes("density")) return "density.svg";
+    if (type.toLowerCase().includes("fracture")) return "Fracture.svg";
+    if (type.toLowerCase().includes("elemental analysis"))
+      return "elemental.svg";
     return "db.svg";
   };
 
@@ -83,8 +89,8 @@ export function EvidenceDetails({ evidence }: { evidence: EvidenceType }) {
                   <Image
                     quality={100}
                     src={"/icons/" + Icon}
-                    width={8}
-                    height={8}
+                    width={40}
+                    height={40}
                     alt={"type icon"}
                   />
                 );
